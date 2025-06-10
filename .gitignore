@@ -35,6 +35,7 @@ coverage.xml
 env/
 venv/
 ENV/
+.v313
 
 # Environment variables
 .env
@@ -80,3 +81,8 @@ logs/
 secrets.yml
 credentials.json
 config_*.py
+
+# data 
+/data
+/tmp
+
