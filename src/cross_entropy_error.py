@@ -17,8 +17,8 @@ def cross_entropy_error(result: np.ndarray, expected: np.ndarray) -> float:
 
     if result.shape != expected.shape:
         raise ValueError(f'Mismatched shapes: result {result.shape}, expected {expected.shape}.')
-
-    return -np.mean(np.sum(expected * np.log(result), axis=0))
+    delta = 1e-7
+    return -np.mean(np.sum(expected * np.log(result + delta), axis=0))
 
 def test():
 

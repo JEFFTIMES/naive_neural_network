@@ -19,7 +19,7 @@ def mean_squared_error(result: np.ndarray, expected: np.ndarray) -> float:
     squared_diff = (result - expected) ** 2
 
     # Sum up the element-wise squared difference for each column, then calculate MEAN for all columns 
-    mse = 0.5 * np.mean(np.sum(squared_diff, axis=0))
+    mse = np.mean(np.sum(squared_diff, axis=0))
 
     return mse
     
